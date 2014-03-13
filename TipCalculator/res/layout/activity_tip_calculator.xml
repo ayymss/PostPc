@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TipCalculatorActivity" >
+
+    <TextView
+        android:id="@+id/billAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="27dp"
+        android:text="Bill Amount"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/chkRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/billAmount"
+        android:layout_below="@+id/billAmount"
+        android:layout_marginTop="28dp"
+        android:checked="true"
+        android:text="Round to nearest dollar" />
+
+    <EditText
+        android:id="@+id/edtBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/billAmount"
+        android:layout_alignBottom="@+id/billAmount"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="Amount in $"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chkRound"
+        android:layout_below="@+id/chkRound"
+        android:layout_marginTop="26dp"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/txtTipResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnCalculate"
+        android:layout_centerVertical="true"
+        android:text="Tip:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+</RelativeLayout>
